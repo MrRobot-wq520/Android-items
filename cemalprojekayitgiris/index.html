@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Auth System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div class="form-box login">
+    <h2>Giriş Yap</h2>
+
+    <input id="login-username" type="text" placeholder="Kullanıcı adı">
+
+    <div class="password-box">
+      <input id="login-password" type="password" placeholder="Şifre">
+      <button type="button" onclick="togglePass('login-password')">👁</button>
+    </div>
+
+    <button onclick="login()">Giriş Yap</button>
+
+    <p onclick="showRegister()">Yenimisin? Kayıt ol</p>
+  </div>
+
+  <!-- REGISTER -->
+  <div class="form-box register hidden">
+    <h2>Kayıt Ol</h2>
+
+    <input id="register-username" type="text" placeholder="Kullanıcı adı">
+    <input id="register-email" type="email" placeholder="Email">
+
+    <div class="password-box">
+      <input id="register-password" type="password" placeholder="Şifre">
+      <button type="button" onclick="togglePass('register-password')">👁</button>
+    </div>
+
+    <button onclick="register()">Kayıt Ol</button>
+
+    <p onclick="showLogin()">Hesabın var mı? Giriş yap</p>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
